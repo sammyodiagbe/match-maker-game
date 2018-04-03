@@ -1,0 +1,22 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+body, html {
+    background: #efefef;
+}
+
+header, nav, footer, aside, section, article, h1, h2, h3,
+h4, h5, h6 {
+    display: block;
+}
+
+
+div#board {
+    height: 500px; 
+    width: 500px;
+    border: 1px solid #4d2;
+    margin: 0 auto;
+}
