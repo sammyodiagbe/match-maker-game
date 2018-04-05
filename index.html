@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,11 +8,54 @@
     <title>Creating a match maker game</title>
     <link rel="stylesheet" type="text/css" href="./styles/game.css">
 </head>
-<body>
-    <h1>Match Maker game</h1>
-    <div class="game-board" id="board">
 
-    </div>  
+<body>
+    <div class="container">
+        <nav class="navigation">
+
+            <a href="" class="nav-brand">
+                Match-maker
+            </a>
+            <ul class="navbar">
+                <li>Github</li>
+            </ul>
+
+        </nav>
+        <div class="main-content" id="main-content">
+            <div class="overlay">
+                <div class="dark-overlay"></div>
+                <div class="message-holder">
+                    <h1>Team Spirit</h1>
+                    <h1>Play a quick match maker game and see how fast you can complete the task</h1>
+                    <button class="button btn-primary" id="play">Start Playing</button>
+                </div>
+            </div>
+        </div>
+        <footer class="page-footer">
+            <div class="footer-content">
+                <p>&copy;blueapeproject</p>
+                <p>Odiagbe Samson</p>
+                <p>This is completely opensource, enjoy using this ideas and code in any of your fun project</p>
+                <a href="" class="social social-facebook">facebook</a>
+                <a href="" class="social social-github">github</a>
+                <a href="" class="social social-twitter">twitter</a>
+            </div>
+        </footer>
+    </div>
+    <!---->
+    <div class="board-container" id="board-container">
+        <div class="game-board" id="board"></div>
+        <span class="close" id="close">&times;</span>
+        <span class="timer" id="timer">20 : 45 : 00</span>
+        <span class="moves">
+            Moves : <span id="moves">0</span>
+        </span>
+        <span class="correct">
+            Correct : <span id="correct">0</span>
+        </span>
+    </div>
+
     <script type="text/javascript" src="./js/gameplay.js"></script>
 </body>
+
 </html>

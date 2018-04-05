@@ -4,19 +4,223 @@
     border: 0;
 }
 
-body, html {
-    background: #efefef;
+html {
+    background: url(../images/teamspirit.jpeg);
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: cover;
+    background-size: 100% 100%;
 }
 
+body {
+    position: relative; 
+    background: url(../images/teamspirit.jpeg);
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+nav.navigation {
+    height: 60px;
+    line-height: 60px;
+    overflow: hidden;
+    padding: 0 1%;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+div.container {
+    width: 900px;
+    max-width: 100%;
+    margin: 0 auto;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, .5);
+}
+
+a.nav-brand {
+    font-size: 1.3em;
+    
+    display: block;
+}
+
+ul.navbar {
+    float: right;
+    color: #fff;
+}
+
+ul.navbar li {
+    display: inline-block;
+    padding:5px 10px;
+}
+
+div.main-content {
+    position: relative;
+}
+
+footer.page-footer {
+    text-align: center;
+    padding: 1% 0;
+    background: #ffffff;
+}
+
+div.footer-content {
+    width: 400px;
+    margin: 0 auto;
+}
 header, nav, footer, aside, section, article, h1, h2, h3,
 h4, h5, h6 {
     display: block;
+}
+
+div.board-container {
+    position: absolute;
+    z-index: 100000;
+    top: 0;
+    height: 100%;
+    background: #fff;
+    width: 100%;
+    transition: left .6s linear;
+    left: 100%;
+    padding: 4% 0 0 0;
+    background: rgba(0 ,0,0,.8);
 }
 
 
 div#board {
     height: 500px; 
     width: 500px;
-    border: 1px solid #4d2;
+    box-shadow: 1px 1px 1px 2px rgba(255,255,255, .8);
     margin: 0 auto;
+    transform-origin: top left;
+    margin: 0 auto;
+    background: #ffffff;
+}
+
+.btn {
+    height: 50px;
+    width: 50px;
+    background: #f0a;
+    color: #fff;
+    box-shadow: 1px 1px 1px 1px rgba(0,0,0,.3);
+    float: left;
+    text-align: center;
+    transition: all .8s linear;
+    cursor: pointer;
+}
+
+div.overlay {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: cover;
+}
+
+div.dark-overlay  {
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+}
+
+button.button {
+    padding: 10px 10px;
+    display: inline-block;
+    background: #f0a;
+    color: #fff;
+    cursor: pointer;
+}
+
+button.button:hover {
+    box-shadow: 1px 1px 1px 1px rgba(255, 0, 180);
+}
+
+div.message-holder {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    z-index: 14000;
+    color: #fff;
+    text-transform: uppercase;
+    width: 800px;
+    font-size: 1em;
+}
+
+.col-row {
+    padding: 1%;
+
+}
+
+.col-row::after {
+    clear: both;
+    content: "";
+    display: block;
+}
+
+.col-6 {
+    width: 48%;
+    padding: 1%;
+    float: left;
+}
+
+.social {
+    padding: 8px 10px;
+    display: inline-block;
+
+}
+
+.social-facebook {
+    color: #3456f7;
+
+}
+
+.social-github {
+    color: #33f7a5;
+}
+
+.social-twitter {
+    color: #44c7f4;
+}
+
+.close {
+    font-size: 2.8em !important;
+    color: #fff;
+    position: absolute;
+    right: 10px;
+    top: 0;
+    cursor: pointer;
+
+}
+
+.timer {
+    color: #fff;
+    font-size: 2em;
+    position: absolute;
+    top: 40%;;
+    left: 5px;
+}
+
+.moves {
+    color: #fff;
+    position: absolute;
+    font-size: 2em;
+    top:40%;
+    right: 10px;
+}
+
+.correct {
+    color: #fff;
+    position: absolute;
+    font-size: 2em;
+    top: 30%;
+    right: 10px;
 }
