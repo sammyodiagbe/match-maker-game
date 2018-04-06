@@ -7,17 +7,24 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Creating a match maker game</title>
     <link rel="stylesheet" type="text/css" href="./styles/game.css">
+
+    <!-- [if lt IE 9]>
+        <link rel="stylesheet" type="text/css" href="./styles/iesupport.css">
+    <[endif]-->
 </head>
 
 <body>
+    <div class="page-overlay"></div>
     <div class="container">
-        <nav class="navigation">
+        <nav class="navigation" id="navigation">
 
             <a href="" class="nav-brand">
                 Match-maker
             </a>
             <ul class="navbar">
-                <li>Github</li>
+                <li><a href="https://www.github.com/sammyodiagbe">Github</a></li>
+                <li><a href="https://www.facebook.com/">Facebook</a></li>
+                <li><a href="https://www.twitter.com/">Twitter</a></li>
             </ul>
 
         </nav>
@@ -54,7 +61,7 @@
             Correct : <span id="correct">0</span>
         </span>
     </div>
-
+    <script type="text/javascript" src="./js/page-interactivity.js"></script>
     <script type="text/javascript" src="./js/gameplay.js"></script>
 </body>
 

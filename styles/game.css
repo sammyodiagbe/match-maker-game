@@ -19,12 +19,22 @@ body {
     background-position: left top;
     background-size: cover;
     overflow-x: hidden;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+div.page-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    background: rgba(0, 0, 0, .4);
 }
 
 nav.navigation {
     height: 60px;
     line-height: 60px;
-    overflow: hidden;
     padding: 0 1%;
 }
 
@@ -37,32 +47,67 @@ div.container {
     width: 900px;
     max-width: 100%;
     margin: 0 auto;
-    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, .5);
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, .6);
+    position: relative;
+    z-index: 100;
 }
 
 a.nav-brand {
-    font-size: 1.3em;
-    
-    display: block;
+    font-size: 1.3em;   
+    display:inline-block;
 }
 
 ul.navbar {
     float: right;
-    color: #fff;
+    color: #ffffff;
 }
 
 ul.navbar li {
-    display: inline-block;
-    padding:5px 10px;
+    display: inline;
+    padding: 10px 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+ul.navbar li::after {
+    position: absolute;
+    content:  " ";
+    height: 3px;
+    background: #3456f7;
+    width: 5%;
+    transition: all .8s;
+    top: 100%;
+    left: 0;
+    display: block;
+}
+
+ul.navbar li::before {
+    position: absolute;
+    content:  " ";
+    height: 3px;
+    background: #f0a;
+    width: 5%;
+    transition: all .8s;
+    top: 100%;
+    right: 0;
+    display: block;
+}
+
+
+ul.navbar li:hover::after, ul.navbar li:hover::before {
+    width: 50%;
+    background: #ffffff;
 }
 
 div.main-content {
     position: relative;
+    min-height: 400px;
 }
 
 footer.page-footer {
     text-align: center;
     padding: 1% 0;
+    min-height: 200px;
     background: #ffffff;
 }
 
@@ -82,11 +127,16 @@ div.board-container {
     height: 100%;
     background: #fff;
     width: 100%;
-    transition: left .6s linear;
+    transition: left .6s linear; 
+    -webkit-transition: left .6s linear;
+    -moz-transition: left .6s linear;
+    -o-transition: left .6s linear;
     left: 100%;
     padding: 4% 0 0 0;
     background: rgba(0 ,0,0,.8);
 }
+
+
 
 
 div#board {
@@ -95,6 +145,10 @@ div#board {
     box-shadow: 1px 1px 1px 2px rgba(255,255,255, .8);
     margin: 0 auto;
     transform-origin: top left;
+    -webkit-transform-origin: top left;
+    -moz-transform-origin: top left;
+    -o-transform-origin: top left;
+    -ms-transform-origin: top left;
     margin: 0 auto;
     background: #ffffff;
 }
@@ -108,6 +162,10 @@ div#board {
     float: left;
     text-align: center;
     transition: all .8s linear;
+    -webkit-transition: all .8s linear;
+    -moz-transition: all .8s linear;
+    -ms-transition: all .8s linear;
+    -o-transition: all .8s linear;
     cursor: pointer;
 }
 
@@ -148,6 +206,10 @@ div.message-holder {
     left: 50%;
     text-align: center;
     transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
     z-index: 14000;
     color: #fff;
     text-transform: uppercase;
